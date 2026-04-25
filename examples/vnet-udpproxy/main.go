@@ -10,8 +10,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/pion/transport/v4/logging"
-	"github.com/pion/transport/v4/vnet"
+	"github.com/metacubex/pion-transport/v4/logging"
+	"github.com/metacubex/pion-transport/v4/vnet"
 )
 
 func main() { //nolint:cyclop

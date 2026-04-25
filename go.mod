@@ -1,4 +1,4 @@
-module github.com/pion/transport/v4
+module github.com/metacubex/pion-transport/v4
 
 go 1.20
 

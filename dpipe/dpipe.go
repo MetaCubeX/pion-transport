@@ -13,7 +13,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pion/transport/v4/deadline"
+	"github.com/metacubex/pion-transport/v4/deadline"
 )
 
 // Pipe creates pair of non-stream conn on memory.
