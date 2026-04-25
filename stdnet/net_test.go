@@ -11,7 +11,7 @@ import (
 	"net"
 	"testing"
 
-	"github.com/pion/logging"
+	"github.com/pion/transport/v4/logging"
 	"github.com/stretchr/testify/assert"
 )
 

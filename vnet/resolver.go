@@ -9,7 +9,7 @@ import (
 	"net"
 	"sync"
 
-	"github.com/pion/logging"
+	"github.com/pion/transport/v4/logging"
 )
 
 var (

@@ -10,7 +10,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/pion/logging"
+	"github.com/pion/transport/v4/logging"
 	"github.com/pion/transport/v4/vnet"
 )
 

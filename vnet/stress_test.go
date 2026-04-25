@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pion/logging"
+	"github.com/pion/transport/v4/logging"
 	"github.com/pion/transport/v4/test"
 	"github.com/stretchr/testify/assert"
 )
