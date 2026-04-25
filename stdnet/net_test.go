@@ -29,7 +29,7 @@ func TestStdNet(t *testing.T) { //nolint:cyclop,maintidx
 			return
 		}
 
-		log.Debugf("interfaces:  %+v", interfaces)
+		log.Debugf("interfaces: %+v", interfaces)
 		for _, ifc := range interfaces {
 			if ifc.Name == lo0String {
 				_, err := ifc.Addrs()

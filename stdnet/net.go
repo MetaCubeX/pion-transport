@@ -11,7 +11,6 @@ import (
 	"net"
 
 	"github.com/pion/transport/v4"
-	"github.com/wlynxg/anet"
 )
 
 const (
@@ -40,15 +39,15 @@ var _ transport.Net = &Net{}
 func (n *Net) UpdateInterfaces() error {
 	ifs := []*transport.Interface{}
 
-	oifs, err := anet.Interfaces()
+	oifs, err := net.Interfaces()
 	if err != nil {
 		return err
 	}
 
-	for i := range oifs {
-		ifc := transport.NewInterface(oifs[i])
+	for _, oif := range oifs {
+		ifc := transport.NewInterface(oif)
 
-		addrs, err := anet.InterfaceAddrsByInterface(&oifs[i])
+		addrs, err := oif.Addrs()
 		if err != nil {
 			return err
 		}
