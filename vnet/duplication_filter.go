@@ -268,7 +268,10 @@ func (f *DuplicationFilter) scheduleDuplicate(dup Chunk, delay time.Duration) {
 	bucket, ok := f.buckets[fireAtN]
 	if !ok {
 		fireAt := time.Unix(0, fireAtN)
-		wait := max(fireAt.Sub(now), 0)
+		wait := fireAt.Sub(now)
+		if wait < 0 {
+			wait = 0
+		}
 		bucket = &dupBucket{}
 		bucket.timer = time.AfterFunc(wait, func() {
 			f.onBucketFired(fireAtN)
